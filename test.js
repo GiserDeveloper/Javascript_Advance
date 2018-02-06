@@ -40,3 +40,16 @@ Object.defineProperty(o2,'modulus',{
     get:modulus,enumerable:true,configurable:true});
 document.write(o2.phase,o2.modulus);
 //6、构造器中的this
+function MyClass(){
+    this.a = 37;
+}
+var o3 = new MyClass();
+document.write(o3.a); //37
+
+function C2(){
+    this.a = 37;
+    return {a:38};
+}
+
+o3 = new C2();
+document.write(o3.a); //38
